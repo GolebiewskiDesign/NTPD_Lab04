@@ -23,7 +23,7 @@ pip install -r requirements.txt
 
  7. Uruchom aplikację
     
-uvicorn app:app --host 0.0.0.0 --port 8000
+uvicorn app:app --host 0.0.0.0 --port 5000
 
 # B. Za pomocą Dockera
 
@@ -32,7 +32,7 @@ docker build -t ml-app .
 
  2. Uruchom kontener
     
-docker run -p 8000:8000 --env-file .env ml-app
+docker run -p 5000:5000 --env-file .env ml-app
 
 # C. Za pomocą Docker Compose
 
@@ -40,7 +40,7 @@ docker run -p 8000:8000 --env-file .env ml-app
 docker-compose up -d --build
 
  2. Sprawdź działanie
-curl http://localhost:8000
+curl http://localhost:5000
 
 
 
