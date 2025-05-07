@@ -35,10 +35,9 @@ def test_predict_valid_input():
     assert len(data["probability"]) == 2
 
 def test_predict_invalid_input():
-    # sepal_length jest stringiem — powinien być float
     payload = {
         "sepal_length": "not_a_number",
         "sepal_width": 3.5
     }
     response = client.post("/predict", json=payload)
-    assert response.status_code == 422  # Unprocessable Entity – walidacja Pydantic
+    assert response.status_code == 422 
